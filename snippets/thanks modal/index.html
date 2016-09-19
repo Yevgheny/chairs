@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thanks modal</title>
+    <meta name="description" content="Remodal example">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="remodal.css">
+    <link rel="stylesheet" href="remodal-default-theme.css">
+</head>
+<body>
+<div class="remodal-bg">
+    
+        <a href="#modal">Проверь!</a>
+</div>
+<div class="remodal modal-form" data-remodal-id="modal">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <h2>Заполните форму</h2>
+    <p>и наш менеджер Вам перезвонит в течение минуты,  для подбора платья в удобное для Вас время!</p>
+    <form action="mail.php" method="post" class="main-form  main-form--modal" name="main-form">
+        
+        <!-- Hidden Required Fields -->
+        <input type="hidden" name="project_name" value="Maxima">
+        <input type="hidden" name="admin_email" value="yevgheny78@gmail.com">
+        <input type="hidden" name="form_subject" value="Заявка с лэндинга">
+        <!-- END Hidden Required Fields -->     
+
+        <div class="input-group">
+            <input type="text" name="first_name" class="input" placeholder="Введите Ваше имя" required>
+        </div>
+        <div class="input-group">
+            <input type="text" name="custom_phone" class="input input--phone" placeholder="Введите Ваш телефон" required>
+        </div>
+        <div class="input-group">
+            <input type="email" name="email" class="input" placeholder="Введите Ваш email" required>
+        </div>
+        <div class="input-group">
+            <input type="text" name="city" class="input" placeholder="Введите Ваш город" required>
+        </div>
+
+        <input type="hidden" name="whatform" value="Форма - заказать примерку">
+
+        <button type="submit" name="submit" class="btn btn-red">заказать примерку</button>
+    
+    </form>
+</div>
+<div class="remodal modal-thanks" data-remodal-id="modal-thanks">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <h2>Благодарим Вас</h2>
+    <p>за проявленный интерес к нашей продукции.</p>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>window.jQuery || document.write('<script src="libs/jquery/dist/jquery.min.js"><\/script>')</script>
+<script src="remodal.min.js"></script>
+<script src="script.js"></script>
+    
+</body>
+</html>

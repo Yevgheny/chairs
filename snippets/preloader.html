@@ -1,0 +1,37 @@
+<div class="preloader-wrap">
+    <div id="fountainTextG">
+        
+    </div>      
+</div>
+
+<style>.preloader-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 1000;
+    opacity: 1;
+    transition: 0.35s;
+}
+#fountainTextG{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:234px;
+    text-align: center;
+    margin-left: -117px;    
+}
+</style>
+
+<script>
+    $(window).on('load', function () {
+        var $preloader = $('.preloader-wrap'),
+        $spinner   = $preloader.find('#fountainTextG');
+        $spinner.fadeOut();
+        $preloader.delay(300).fadeOut('slow');
+    });
+</script>

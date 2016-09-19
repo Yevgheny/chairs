@@ -1,0 +1,67 @@
+<?php
+        $counter = 0;
+        if( have_rows('блок_описание') ):
+            while ( have_rows('блок_описание') ) : the_row(); $counter++;
+        ?>
+
+        <?php
+        if( ($counter%2) == 1) { 
+            ?>
+
+        <div class="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 service-info-wrap  no-padding">
+                        <div class="col-md-6  no-padding">                      
+                            <div class="service-statement">
+                                <?php the_sub_field("описание_услуги") ?>
+                            </div>
+                        </div>
+                        <div class="col-md-6  no-padding">
+
+                            <div class="service-pic">
+                                <img src="<?php the_sub_field("фото_день") ?>">
+
+                                <a href="#test-form-4" class="btn service-btn popup-with-form">Заказать проект</a>
+                                <div class="service-pic-night">
+                                    <img src="<?php the_sub_field("фото_ночь") ?>">
+                                    <a href="#test-form-4" class="btn service-btn  popup-with-form">Заказать проект</a>                     
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <?php } else { ?>   
+
+        <div class="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 service-info-wrap  no-padding">
+                        <div class="col-md-6 col-md-push-6  no-padding">                        
+                            <div class="service-statement">
+                                <?php the_sub_field("описание_услуги") ?>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-md-pull-6  no-padding">
+                            <div class="service-pic">
+                                <img src="<?php the_sub_field("фото_день") ?>">
+                                <a href="#test-form" class="btn service-btn popup-with-form">Заказать проект</a>
+                                <div class="service-pic-night">
+                                    <img src="<?php the_sub_field("фото_ночь") ?>">
+                                    <a href="#test-form" class="btn service-btn popup-with-form">Заказать проект</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <?php }
+            endwhile; endif;
+        ?>
